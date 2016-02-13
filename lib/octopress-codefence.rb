@@ -5,7 +5,7 @@ module Octopress
   module Codefence
     Jekyll::Hooks.register [:posts, :pages, :documents], :pre_render do |item, payload|
       if item.respond_to?(:ext)
-        ext = item.ext
+        ext = item.data['ext']
       else
         ext = nil
       end
