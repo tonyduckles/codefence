@@ -17,7 +17,7 @@ module Octopress
       LangCaption = /([^\s]+)\s*(.+)?/i
 
       def initialize(input, ext=nil, aliases=nil)
-        @input   = input
+        @input   = input.dup
         @ext     = ext
         @aliases = aliases
       end
